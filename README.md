@@ -7,7 +7,7 @@
 - `Listar Shows Correspondentes:` Ao pesquisar por um show, a aplicação lista até três shows correspondentes, incluindo a imagem, o título e a classificação média.
 
 ## Dependências
-A aplicação utiliza a [API do TVMaze][https://www.tvmaze.com/api] para obter informações sobre shows de TV.
+A aplicação utiliza a [API do TVMaze](https://www.tvmaze.com/api) para obter informações sobre shows de TV.
 
 ## Estrutura do Código
 - `fetchShows(nameShow: string):` Obtém informações sobre o show na API do TVMaze.
