@@ -75,7 +75,6 @@ async function submitShowName(ev) {
     const value = getShowName();
     try {
         const response = await fetchShows(value);
-        console.log(response);
         settingVales(response);
         clearError();
     }
@@ -95,7 +94,6 @@ function settingVales(shows) {
 }
 function removeDivFilm() {
     const divs = document.querySelectorAll("#film");
-    console.log(divs);
     if (divs) {
         divs.forEach(element => element.remove());
     }

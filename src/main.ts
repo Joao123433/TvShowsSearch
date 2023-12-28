@@ -85,7 +85,6 @@ async function submitShowName(ev: { preventDefault: () => void }) {
   const value = getShowName()
   try {
     const response = await fetchShows(value)
-    console.log(response)
     settingVales(response)
     clearError()
   } catch(erro) {
@@ -107,7 +106,6 @@ function settingVales(shows) {
 
 function removeDivFilm() {
   const divs = document.querySelectorAll("#film")
-  console.log(divs)
   if(divs) {
     divs.forEach(element => element.remove())
   }
