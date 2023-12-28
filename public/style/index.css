@@ -110,7 +110,7 @@ form button {
 #error {
   display: var(--display);
   font-size: 0.8rem;
-}
+} 
 
 #container {
   width: 90%;
@@ -129,23 +129,30 @@ form button {
 
 #film {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   text-align: center;
   background-color: #6d5a7444;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #film img {
   width: 100%;
-  height: 80%;
+  min-height: 80%;
 }
 
 #name-film {
-  font-size: 18px;
+  font-size: 14px;
+  width: 90%;
+  margin: 5px 0px;
+  text-align: center;
 }
 
 #rating {
-  font-size: 15px;
+  font-size: 13px;
+  margin: 0px 0px 5px;
   color: #3C948B;
 }
 
@@ -169,6 +176,9 @@ footer a:hover {
 }
 
 @media (min-width: 301px) {
+  #container {
+    width: 80%;
+  }
   #name-project h1 {
     font-size: 1.3rem;
   }
@@ -183,12 +193,39 @@ footer a:hover {
 
 
 @media (min-width: 500px) {
+  header {
+    margin-top: 5px;
+  }
+
+  nav a {
+    font-size: 1.3rem
+  }
+  
+  #container {
+    width: 75%;
+  }
+
   #name-project h1 {
     font-size: 1.8rem;
   }
 
+  #name-project svg {
+    width: 25px;
+    height: 23px; 
+  }
+
   #film {
     width: 90%;
+  }
+
+  #name-film {
+    font-size: 15px;
+    margin: 8px 0px;
+  }
+
+  #rating {
+    font-size: 14px;
+    margin: 0px 0px 8px;
   }
 
   #error {
@@ -197,9 +234,8 @@ footer a:hover {
 }
 
 @media (min-width: 800px) {
-  #name-project svg {
-    width: 25px;
-    height: 23px; 
+  #container {
+    width: 68%;
   }
 
   nav a {
@@ -231,21 +267,64 @@ footer a:hover {
     font-size: 1.8rem;
   }
 
+  #film {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  #name-film {
+    font-size: 22px;
+    margin: 0px;
+  }
+
+  #rating {
+    font-size: 20px;
+    margin: 0px 0px 8px;
+  }
+
+  footer {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #container {
+    width: 95%;
+  }
+
   #films {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
   }
 
+  #film {
+    gap: 5px;
+  }
+
   #name-film {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   #rating {
     font-size: 18px;
-    margin: 8px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #films {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
   }
 
-  footer {
+  #film {
+    gap: 10px;
+  }
+
+  #name-film {
     font-size: 20px;
+  }
+
+  #rating {
+    font-size: 18px;
   }
 }

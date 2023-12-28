@@ -51,7 +51,7 @@ function createImage(src) {
   if(src) {
     image.src = src.medium
   } else {
-    image.src = `https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg`
+    image.src = "./public/assets/erro.jpg"
   }
   
   return image
@@ -85,6 +85,7 @@ async function submitShowName(ev: { preventDefault: () => void }) {
   const value = getShowName()
   try {
     const response = await fetchShows(value)
+    console.log(response)
     settingVales(response)
     clearError()
   } catch(erro) {
