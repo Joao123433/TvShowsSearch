@@ -40,13 +40,15 @@ function createDiv(id) {
     div.id = id;
     return div;
 }
-function createImage(src) {
+function createImage(showElement) {
     const image = document.createElement("img");
-    if (src) {
-        image.src = src.medium;
+    if (showElement.show.image) {
+        image.src = showElement.show.image.medium;
+        image.alt = `Show ${showElement.show.name}`;
     }
     else {
         image.src = "./public/assets/erro.jpg";
+        image.alt = "Erro image";
     }
     return image;
 }
@@ -85,7 +87,7 @@ async function submitShowName(ev) {
 function settingVales(shows) {
     for (let i = 0; i < shows.length; i++) {
         const divFilm = createDiv("film");
-        const image = createImage(shows[i].show.image);
+        const image = createImage(shows[i]);
         const title = createTitle("name-film", shows[i].show.name);
         const rating = createRating("rating", shows[i].show.rating.average);
         divFilm.append(image, title, rating);
